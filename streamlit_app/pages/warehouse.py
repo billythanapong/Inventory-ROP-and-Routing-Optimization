@@ -24,9 +24,6 @@ with tab1:
     # Metric cards
     total_monetary = df['unit_price'].sum() if 'unit_price' in df.columns else 0
     total_holding_cost = df['holding_cost_per_unit_day'].sum() if 'holding_cost_per_unit_day' in df.columns else 0
-    # colA, colB = st.columns(2)
-    # colA.metric("Total Monetary Value", f"{total_monetary:,.2f}")
-    # colB.metric("Total Holding Cost/Unit/Day", f"{total_holding_cost:,.2f}")
 
     # 1. Number of tracked items
     num_items = len(df)
@@ -236,6 +233,7 @@ with tab2:
             stock_projection.append(next_stock)
             if shortage_day is None and next_stock < new_ROP:
                 shortage_day = i
+                
         # Show result as text
         st.write(f"**Item:** {item} / **Category:** {item_data['category'].values[0]} / **Inventory Tier:** {item_data['Inventory_Tier'].values[0]}")
         st.write(f"**Current Stock Level:** {stock_level}")

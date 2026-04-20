@@ -26,25 +26,20 @@ To assist the warehouse operators, the system recalculates the inventory Reorder
 * **Forecasting Integration:** The application cross-references the ROP against a 7-day high-demand forecast provided within the dataset, allowing the warehouse operator to anticipate potential stockouts and make informed purchasing decisions.
 * **Outcome:** The Streamlit dashboard visualizes these metrics, empowering the warehouse operator to make decision faster and more informed.
 
-    ####  Formula — Reorder Point (ROP):
 
-    $$ROP = avg. daily \times leadtime \times SS$$
+---
 
-    $$SS = Z \times \sigma_d$$
+## 🖼️ Demo Screenshots
 
-    | Symbol | Meaning |
-    |--------|---------|
-    | $Z$ | Service-level Z-score (e.g., 1.96 for 97.5%) |
-    | $\sigma_d$ | Standard deviation of daily demand |
-
-**How to obtain Z:**
-
-1. Determine the Tier of each items based on RFM segmentation (A, B, C).
-2. Assign a service level to each tier (e.g., A = 99%, B = 97.5%, C = 95%, D = 90%).
-3. Use a t-table to find the corresponding Z-score for each service level (e.g., 99% → Z = 2.33, 97.5% → Z = 1.96, 95% → Z = 1.645).
-
-
-
+<div align="center">
+    <text> Warehouse Page Demo </text>
+    <img src="./streamlit_app/components/warehouse_page.png" alt="Warehouse Page Demo" style="width:100%;max-width:900px;margin-bottom:24px;"/>
+    <br>
+    <text> Delivery Page Demo </text>
+    <img src="./streamlit_app/components/delivery.png" alt="Delivery Page Demo" style="width:100%;max-width:900px;margin-bottom:24px;"/>
+    <br>
+    <img src="./streamlit_app/components/delivery2.png" alt="Delivery Route Demo" style="width:100%;max-width:900px;"/>
+</div>
 
 ---
 
